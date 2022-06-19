@@ -1,19 +1,23 @@
 :root{
     margin: 0;
     padding: 0;
+    font-size: 16px;
     box-sizing: border-box;
 }
 
 
 .grid-container{
+    resize: both;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 1fr 2fr 2fr;
     gap: 5px;
     grid-template-areas: 
     "nav-area header header"
     "nav-area main-area announcements"
 }
 
+
+/*start nav-area*/
 .grid-container > .nav-area{
     background-color: aqua;
     grid-area: nav-area;
@@ -22,6 +26,7 @@
 
 .nav-area{
     display: grid;
+    grid-column: 1/2;
     grid-template-rows: 1fr 2fr 2fr;
 }
 
@@ -39,20 +44,57 @@
     align-self: flex-end;
 }
 
+/*start header area*/
 .grid-container > .header{
     background-color: aqua;
     grid-area: header;
     border: 1px solid black;
 }
 
+.header{
+    display: grid;
+    grid-column: 2/4;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.header > .header-1 > form{
+    display: grid;
+    grid-template-columns: 0.2fr 2fr;
+    gap: 5px;
+}
+
+.header > .header-2{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.header > .header-3{
+    display: flex;
+    gap: 10px;
+}
+
+.header > .header-4{
+    display: grid;
+    grid-template-columns: 1fr 1.8fr 1.5fr;
+    align-items: flex-start;
+    justify-items: flex-end;
+    justify-self: flex-end;
+}
+
 .grid-container > .main-area{
     background-color: aqua;
+    grid-column: 2/4;
     grid-area: main-area;
     border: 1px solid black;
 }
 
 .grid-container > .announcements{
     background-color: aqua;
+    grid-column: 2/4;
     grid-area: announcements;
     border: 1px solid black;
 }
