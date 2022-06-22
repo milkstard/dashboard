@@ -3,6 +3,7 @@ body{
     padding: 0;
     font-size: 16px;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .grid-container{
@@ -218,6 +219,10 @@ body{
     border-radius: 5px;
 }
 
+.announcement-bar{
+    padding: 10px;
+}
+
 .announcements-2-2-1 > .trend > img{
     border-radius: 50%;
     width: 50px;
@@ -252,6 +257,5 @@ footer{
     align-items: flex-start;
     text-align: center;
     border: 1px solid black;
-    border-radius: 10px;
     background-color: #E2E8F0;
 }
